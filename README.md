@@ -16,3 +16,10 @@ The features implemented for the demonstrations:
 Demo user accounts:
   1. daveywang@live.com, password: demo
   2. lwwang@live.com, password: demo
+
+How to run the application?
+  1. go to the folder in which the app.js is.
+  2. run the command: node app.js
+  3. open a browser and enter http://localhost:8081/
+  
+  
