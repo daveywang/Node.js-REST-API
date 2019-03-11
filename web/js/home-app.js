@@ -38,6 +38,7 @@ app.run(function($rootScope) {
 			$rootScope.webSocket.send('ALERT: This is WebSocket demo. All online users will see this message.');
 		}
 		else {
+			$('#data_container').hide();
 			$('#msg_container').html('WebSocket is not open.').show();
 		}	
 	}
