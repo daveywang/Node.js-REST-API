@@ -1,0 +1,233 @@
+html, body {
+	width: auto;
+	height: 100%;
+	margin: auto;
+	padding: 0px;
+	background-color:black;
+}
+
+#login_container {
+	width: 500px;
+	height: 280;
+	padding: 0px;
+	margin: auto;
+	position:fixed;
+	top: calc((100% - 450px) / 2);
+    left: calc((100% - 500px) / 2);
+}
+
+#login_input {
+	padding: 25px;
+	margin-right: 5px;
+	margin-left: 5px;
+	background-color:#B4D7EB;	
+}
+
+#login_input input[type=text], #login_input input[type=password] {
+	width: 100%;
+	padding: 10px 20px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	display: inline-block;
+	
+	border: 2px solid #c4d9ea;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+}
+
+button {
+	background-color: #008CBA; /*#4CAF50;*/
+	color: white;
+	padding: 9px 0px;
+	margin-top: 15px;
+	margin-left: auto;
+	border: none;
+	cursor: pointer;
+	width: 150px;
+	font-weight:bold;	
+	border: 1px solid #c4d9ea !important;
+}
+
+#login_button {
+	background-color: #4CAF50 !important;
+	margin-left: calc((100% - 150px) / 2);
+}
+
+#rest_op_button, #rest_upload_button, #rest_download_button {
+	margin-left: 35px;
+}
+button:hover {
+	opacity: 0.8;
+}
+
+#data_container {
+	width: 94%;
+	height: auto;
+	text-align: left;
+	padding: 10px;
+	color: white;
+	margin-top: 20px;
+	position:fixed;
+	border: 1px solid #ccc;
+	top: 390px;
+	left: calc((100% - 95%) / 2);
+	overflow: auto;
+	display: none;
+}
+
+#msg_container {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	padding: 0px;
+	color: red;
+	margin-top: 20px;
+	position:fixed;
+	bottom: calc((100% - 220px) / 2);
+	font-size: 120%;
+	display: none;	
+}
+
+#rest_op {
+	width: 95%;
+	height: 135px;
+	text-align: left;
+	padding: 0px;
+	margin-top: 20px;
+	position:fixed;
+	border: 1px solid #ccc;
+	left: calc((100% - 95%) / 2);
+	top: 55px;
+}
+
+#rest_download_upload {
+	width: 95%;
+	position: fixed;
+	margin: 0px;
+	left: calc((100% - 95%) / 2);
+	top: 220px;
+}
+
+#rest_upload {
+	width: 49.5%;
+	height: 135px;
+	text-align: left;
+	padding: 0px;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+#rest_download {
+	width: 49.5%;
+	height: 135px;
+	text-align: left;
+	padding: 0px;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	margin-left: 0px;
+	float: right;
+}
+
+legend {
+	color:white; 
+	font-weight:bold;
+	text-align: left;
+	font-size: 100%;
+	margin-left: 30px;
+}
+
+#rest_operation_input {
+	width: 95%;
+	padding: 25px;
+	margin-right: 5px;
+	margin-left: 5px;
+	color: white;
+}
+
+#rest_operation_input input[type=text], #rest_operation_input input[type=file]{
+	padding: 7px 20px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+#rest_op_select {
+	margin-left: 20px;
+	padding: 6px 20px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+#rest_download_select {
+	margin-left: 5px;
+	padding: 6px 20px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+#header_buttons {
+	width: 95%;
+	position: fixed;
+	margin: 0px;
+	left: calc((100% - 95%) / 2);
+	/*border: 2px solid #c4d9ea;*/
+}
+
+#logout_button {
+	background-color: #f45f42 !important; /*#4CAF50;*/
+	float: right;
+}
+
+#message_button {
+	background-color: #f45f42 !important; /*#4CAF50;*/
+	float: right;
+	margin: 0px;
+	margin-right: 45px;
+
+	display: none;
+}
+
+.common_style {
+	border: 2px solid #c4d9ea;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75); 
+}
+
+#waitting {
+	margin-left: 40px;
+	margin-top: 13px;
+	position: absolute;
+	display: none;
+}
+
+#popup_message {
+	border: 2px solid #c4d9ea;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);  
+	vertical-align: middle;
+    text-align: center;
+    width: calc(100% / 2);
+    height: 65px;
+    line-height: 65px;
+	margin: 0px;
+	margin-left:calc(100% / 4); ;
+	margin-right:auto;
+	padding: 15px;
+	background-color: #D32137;
+	color: white;
+	font-size: 130% !important;
+	left: 7px;
+	top: calc(100% / 2 - 65px); 
+	z-index: 9999;
+	position: fixed;
+}

@@ -1,0 +1,75 @@
+/**
+ * Copyright 2019, Liwei Wang <daveywang@live.com>.
+ * All rights reserved. 
+ * Author: Liwei Wang
+ * Date: 02/2019
+ *
+ */
+ 
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+	</head>
+
+	<body>
+		<div ng-app="restDemoApp" ng-controller="restDemoAppController">
+			<div id="header_buttons">
+				<form id="logout_form" action="/logout" method="GET"> 
+					<button id="logout_button" type="submit" class="common_style">LOGOUT</button>
+				</form>
+				<button id="message_button" type="button" class="common_style" ng-click="sendMessage()">ALERT</button>
+			<div>
+		
+			<fieldset id="rest_op" class="common_style">   
+		     	<legend>REST OPERATION</legend>
+				<form id="books_form" action="/books" method={{selectedOperation}}> 
+					<div id="rest_operation_input">
+						<label for="authorName"><b>Author Name</b></label>
+						<input type="text" placeholder="Enter Author Name" name="authorName" style="width:20%" class="common_style">
+						<label for="bookTitle" style="margin-left:15px"><b>Book Title</b></label>
+						<input type="text" placeholder="Enter Book Title" name="bookTitle" ng-disabled="selectedOperation != 'GET'" style="width:25%" class="common_style">
+						<select id="rest_op_select" ng-model="selectedOperation" ng-options="x for x in operations" class="common_style"></select>
+						<button id="rest_op_button" type="submit" class="common_style">SEND</button>
+					</div>
+				</form>
+			</fieldset>
+			
+			<div id="rest_download_upload">
+				<fieldset id="rest_upload" class="common_style">   
+					<legend>REST UPLOAD</legend>
+					<form id="upload_form" enctype="multipart/form-data" action="/upload" method="POST"> 
+						<div id="rest_operation_input">
+							<input type="file" name="fileName" style="width:60%" class="common_style" required>
+							<button id="rest_upload_button" type="button" ng-click="uploadFile()" class="common_style">UPLOAD</button>
+							<img id="waitting" src="../img/waitting.gif" height="40" width="40">
+						</div>
+					</form>
+				</fieldset>
+				<fieldset id="rest_download" class="common_style">   
+					<legend>REST DOWNLOAD</legend>
+					<form id="download_form" action="/download" method="GET"> 
+						<div id="rest_operation_input">
+							<label for="fileName"><b>File Name</b></label>
+							<!--
+							<input type="text" placeholder="Enter File Name" name="fileName" style="width:50%" class="common_style" required>
+							-->
+							<select id="rest_download_select" name="fileName" ng-model="selectedFileName" ng-options="x for x in fileList" style="width:50%" class="common_style"></select>
+							<button id="rest_download_button" type="button" ng-click="checkFile()" class="common_style">DOWNLOAD</button>
+						</div>
+					</form>
+				</fieldset>
+			</div>
+		</div>
+		
+		<div id="data_container"></div>
+		<div id="msg_container"></div>
+		
+		<script language="javascript" src="../js/angular.min.js"></script>
+		<script language="javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script language="javascript" src="../js/home-app.js"></script>
+		<script language="javascript" src="../js/home-app-controller.js"></script>
+		<script language="javascript" src="../js/home-app-service.js"></script>
+	</body>
+</html> 
