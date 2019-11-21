@@ -3,7 +3,7 @@ Demo of REST API by using Node.js
 
 The technologies used:
   1. Frontend: Angular JS, HTML 5, CSS 5, JavaScript, JQuery, Ajax.
-  2. Backend: Node.js, Express, WS - Web Socket, Sqlite 3 database, etc.
+  2. Backend: Node.js, Express, WS - Web Socket, Sqlite 3 and Oracle database, etc.
 
 The features implemented for the demonstrations:
   1. REST Full operations: GET, PUT, POST and DELETE
