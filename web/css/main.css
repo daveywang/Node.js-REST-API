@@ -76,6 +76,34 @@ button:hover {
 	display: none;
 }
 
+#data_container table {
+	width: 100%;
+}
+#data_container td, #data_container th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+  
+#data_container tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+#data_container tr:nth-child(odd){
+	background-color: #bfc3fa;
+}
+
+#data_container tr:hover {
+	background-color: rgb(250, 182, 127);
+}
+
+#data_container th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color: #4CAF50;
+	color: white;
+}
+
 #msg_container {
 	width: 100%;
 	height: 50px;

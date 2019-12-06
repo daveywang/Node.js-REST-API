@@ -9,8 +9,10 @@
 app.controller('restDemoAppController', function($scope, Utils) {
 	$scope.operations = ['GET', 'PUT', 'POST', 'DELETE'];
 	$scope.selectedOperation = $scope.operations[0];
+	$scope.data = [];
+
 	initFileList();
-	Utils.booksFormSubmitEventBinding();
+	Utils.booksFormSubmitEventBinding($scope);
 
 	$scope.uploadFile = () => {
 		$.when(Utils.uploadFile()).done((response) => {

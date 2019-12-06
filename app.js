@@ -68,7 +68,7 @@ app.get('/logout', requestHandler);
 utils.printMsg(msgType.info, 'The server is starting...');
 
 /* Start the restful API server */
-const server = app.listen(port, () => {
+const server = app.listen(port, "0.0.0.0", () => {
    let host = server.address().address;
    let port = server.address().port;
    utils.printMsg(msgType.info, util.format('Application server is listening at http://%s:%s', host, port));

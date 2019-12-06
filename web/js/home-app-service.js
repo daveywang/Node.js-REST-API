@@ -90,7 +90,7 @@ app.service('Utils', function($http) {
 		});
 	};
 	
-	this.booksFormSubmitEventBinding = () => {
+	this.booksFormSubmitEventBinding = ($scope) => {
 		let form = $('#books_form');
 		form.submit((event) => {
 			event.preventDefault(); 						
@@ -111,9 +111,11 @@ app.service('Utils', function($http) {
 				data: formData,
 				dataType: 'json',
 				success: (response) => {
-					//alert('GOOD: ' + JSON.stringify(response));
+					$scope.data = response;
+					//alert('GOOD: ' + JSON.stringify($scope.data));
 					$('#msg_container').hide();
-					$('#data_container').html(JSON.stringify(response)).show();
+					//$('#data_container').html(JSON.stringify(response)).show();
+					$('#data_container').show();
 				},
 				error: (response) => {
 					//alert('BAD: ' + JSON.stringify(response));
