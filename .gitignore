@@ -1,0 +1,6 @@
+user-files/
+*.iml
+target/
+.idea/
+temp/
+*.DS_Store
